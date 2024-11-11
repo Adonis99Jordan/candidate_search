@@ -118,3 +118,42 @@ tbody tr:nth-child(odd) {
   width: 80vw;
   table-layout: fixed;
 }
+
+.candidate {
+  border-radius: 50px;
+  background-color: black;
+ 
+}
+
+.candidate > img {
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+}
+
+.candidate > div {
+  padding: 20px;
+}
+
+.skip-button {
+  background-color: red;
+  border-radius: 200px;
+  width: 100px;
+  height: 100px;
+  color: black;
+  font-size: 50px;
+  padding: 20px;
+}
+.save-button {
+  background-color: green;
+  border-radius: 200px;
+  width: 100px;
+  height: 100px;
+  color: black;
+  font-size: 50px;
+  padding: 20px;
+}
+.button-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}

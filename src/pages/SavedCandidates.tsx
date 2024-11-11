@@ -1,11 +1,11 @@
-import React, { useEffect, useState }from 'react';
+import React, { useEffect, useState } from 'react';
 import { Candidate } from '../interfaces/Candidate.interface';
 
 const SavedCandidates = () => {
 const [savedCandidates, setSavedCandidates] = useState<Candidate[]>([]);
 
 useEffect(() => {
-  const storedCandidates = localStorage.getItem('SavedCandidates');
+  const storedCandidates = localStorage.getItem('savedCandidates');
   if (storedCandidates) {
     setSavedCandidates(JSON.parse(storedCandidates));
   }
@@ -18,7 +18,7 @@ useEffect(() => {
           <div key={index}>
             <img src={candidate.avatar_url} alt={candidate.name} />
             <h2>{candidate.name}</h2>
-            <p>Username: {candidate.username}</p>
+            <p>Username: {candidate.login}</p>
             <p>Location: {candidate.location}</p>
             <p>Email: {candidate.email}</p>
             <p>Company: {candidate.company}</p>
